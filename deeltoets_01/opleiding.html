@@ -6,15 +6,13 @@
 		<meta name="description" content="CMD Amsterdam" />    
     	<meta name="author" content="Margo de Graaf" />    
     	<meta name="keywords" content="opdracht, 1, hva, front, end, development, cmd, amsterdam, opleiding, opleidingsinformatie"/>  
-		<!-- Oproepen van CSS bestand-->
-		<link rel="stylesheet" type="text/css" href="inc/style.css" />
 	</head>
 	
 	<body>
 			<header>
 				<nav>
 					<ul>
-					  <li><a href="opleiding.html">Opleiding CMD Amsterdam</a></li>
+					  <li><a href="opleiding.html">Opleiding</a></li>
 					  <li><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>	
@@ -48,11 +46,12 @@
 					te springen op nieuwe ontwikkelingen.
 					</p>
 					
-					<!-- http://www.w3schools.com/html/html_videos.asp -->
-					<video width="616" height="347" controls>
+					<video width="616" height="347" poster="http://camendesign.com/code/video_for_everybody/poster.jpg" controls>
 						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
-						<object data="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" width="616" height="347">
-						</object> 
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm">
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg">
+						<!--Foutmelding:The track element is not supported by browsers yet. It would probably be better to wait for implementations.-->
+						<track kind="captions" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webvtt" label="Captions"  srclang="en-us" default >
 					</video>
 				</article>
 
@@ -64,10 +63,10 @@
 					aansluiting op de huidige &#233;n de toekomstige beroepspraktijk.
 					</p>
 					
-					<p class="italic">
+					<em>
 					CMD Amsterdam is een ontwerpopleiding die studenten opleidt om te denken als een
 					ontwerper bij het ontwikkelen van interactieve toepassingen;
-					</p>
+					</em>
 					
 					<p>
 					CMD Amsterdam gelooft in het &#39;human centered&#39; ontwerpproces. Wij zien een steeds
@@ -81,11 +80,11 @@
 					prototyping in het curriculum en wil studenten hierin helpen en stimuleren.
 					</p>
 				
-					<p class="italic">
+					<em>
 					Bij CMD Amsterdam staat de mens centraal, niet alleen als eindgebruiker van een
 					ontwikkelde toepassing maar ook als mens met sociaal-maatschappelijke context; 
 					<a href="studieprogramma.html">zie studieprogramma.</a>
-					</p>
+					</em>
 					
 					<p>
 					CMD Amsterdam heeft een kernprogramma dat alle studenten moeten volgen. De
@@ -151,9 +150,5 @@
 						</ol>
 				</article>
 			</section>
-			
-			<!-- Nog niet nodig:
-			<aside></aside>
-			<footer></footer> -->
 	</body>
 </html>
