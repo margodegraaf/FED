@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CMD Amsterdam</title>
+    	<meta charset="utf-8" />    
+		<meta name="description" content="CMD Amsterdam" />    
+    	<meta name="author" content="Margo de Graaf" />    
+    	<meta name="keywords" content="opdracht, 1, hva, front, end, development, cmd, amsterdam, opleiding, opleidingsinformatie"/> 
+		<!-- Oproepen van Google font -->	
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<!-- Oproepen van css bestand -->
+		<link rel="stylesheet" href="inc/opmaak.css" />
+	</head>
+	
+	<body>
+			<header>
+				<nav>
+					<ul>
+					  <li><a href="opleiding.html">Opleiding</a></li>
+					  <li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>	
+			</header>
+		
+			<section>
+				<article>
+					<h1>Contact</h1>
+						<p>
+							Bent u geinteresseerd in samenwerken met CMD Amsterdam? Dat kan!
+							Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook
+							lopen de studenten stage, in het tweede en afstudeerjaar.
+						</p>
+						
+						<em>
+							CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.
+						</em>
+						
+						<p>
+							Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen.
+							Wij nemen zo nodig contact met u op nadat het formulier is verstuurd.
+							Voor vragen of opmerkingen kunt u <a href="contact.html">contact</a> met ons op.
+						</p>
+				</article>
+			</section>
+			
+			<form action="#" method="post" autocomplete="on">
+				 <fieldset>
+					<legend>Aanmelden</legend>
+					<label for="naam">Naam:</label>
+					<input type="text" name="name" id="naam" placeholder="Naam" autofocus required><br>
+					
+					<label for="bedrijf">Bedrijf:</label>
+					<input type="text" name="company" id="bedrijf" placeholder="Bedrijf" required><br>
+					
+					<label for="adres">Adres:</label>
+					<input type="text" name="address" id="adres" placeholder="Adres" required><br>
+					 
+					<label for="postcode">Postcode:</label>
+					<input type="text" name="zipcode" id="postcode" placeholder="Postcode" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" required><br>
+					
+					<label for="plaats">Plaats:</label>
+					<input type="text" name="city" id="plaats" placeholder="Plaats" required><br>
+					
+					<label for="telefoon">Telefoon:</label>
+					<input type="tel" name="phone" id="telefoon" placeholder="Telefoon"  pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required><br>
+					 
+					<label for="email">E-mail: </label> 
+					<input type="email" name="mail" id="email" placeholder="E-mail" required><br>
+			
+					<p>Ik wil mij aanmelden voor:</p>
+					<input type="checkbox" name="keuze" value="project">Voor een project
+					<input type="checkbox" name="keuze" value="stage">Als stagebedrijf<br>
+				</fieldset>
+			
+				<fieldset>
+					<legend>Project</legend>
+					<label for="titel">Titel: </label>
+					<input type="text" name="title" id="titel" placeholder="Titel" required><br>
+					
+					<label for="omschrijving">Opdrachtomschrijving:</label>
+					<input type="text" name="description" id="omschrijving" placeholder="Omschrijving" required><br>
+					
+					<label for="doelgroep">Doelgroepomschrijving:</label>
+					<input type="text" name="targetgroup" id="doelgroep" placeholder="Doelgroepomschrijving" required><br>
+					
+					<label for="doelstelling">Doelstelling/ intentie van het project:</label>
+					<input type="text" name="goal" id="doelstelling" placeholder="Doelstelling/ intentie van het project" required><br>
+					
+					<label for="looptijd">Looptijd:</label>
+					<input type="text" name="time" id="looptijd" placeholder="Looptijd" required><br>
+					
+					<label for="datum">Deadline:</label>
+					<!--Foutmelding: The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.-->
+					<input type="date" name="deadline" id="datum" required><br>
+					
+					<label for="geschikt">Geschikt voor:</label>
+					<select id="geschikt">
+						<option value="eerstejaars">Eerstejaars studenten</option>
+						<option value="tweedejaars">Tweedejaars studenten</option>
+						<option value="derdejaars">Derdejaars studenten</option>
+						<option value="afstuderders">Afstudeer studenten</option>
+						<option value="onbekend">Onbekend</option>
+					</select><br>
+					
+					<label for="opmerking">Opmerking:</label><br>
+					<textarea id="opmerking"></textarea><br>
+				</fieldset>
+			
+				<fieldset>
+					<legend>Stage</legend>
+					<label for="stagegeschikt">Geschikt voor:</label>
+					<select id="stagegeschikt">
+						<option value="jaar_twee">Tweedejaars studenten</option>
+						<option value="jaar_vier">Afstudeer studenten</option>
+						<option value="jaar_onbekend">Onbekend</option>
+					</select><br>
+					
+					<p>Hoelang is de stage?</p>
+					<input type="radio" name="stagelengte" value="tien">10 weken<br>
+					<input type="radio" name="stagelengte" value="twintig">20 weken<br>
+					
+					<label for="begindatum">Begindatum:</label>
+					<!-- Foutmelding: The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill. -->
+					<input type="date" name="start" id="begindatum" required><br>
+					
+					<label for="werkzaamheden">Beschrijving stagewerkzaamheden:</label><br>
+					<textarea id="werkzaamheden"></textarea><br>
+
+					<h2>Beschrijving stagebedrijf</h2>
+					<label for="bedrijfsnaam">Bedrijfsnaam:</label>
+					<input type="text"  name="internship_name" id="bedrijfsnaam" placeholder="Bedrijfsnaam" required><br>
+					
+					<label for="stageadres">Adres:</label>
+					<input type="text" name="internship_address" id="stageadres" placeholder="Adres" required><br>
+					
+					<label for="stagepostcode">Postcode: </label>
+					<input type="text" name="internship_zipcode" id="stagepostcode" placeholder="Postcode" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" required><br>
+					
+					<label for="stageplaats">Plaats:</label>
+					<input type="text" name="internship_city" id="stageplaats" placeholder="Plaats" required><br>
+					
+					<label for="sector">Sector:</label>
+					<input type="text" name="internship_sector" id="sector" placeholder="Sector" required><br>
+					
+					<label for="core">Core Business:</label>
+					<input type="text" name="internship_core" id="core" placeholder="Core Business" required><br>
+					
+					<label for="stageopmerking">Opmerking:</label><br>
+					<textarea id="stageopmerking"></textarea><br>
+				</fieldset>
+				
+				<p>* verplichte velden<p>
+				<input type="submit" value="Verzenden">
+			</form>
+	</body>
+</html>

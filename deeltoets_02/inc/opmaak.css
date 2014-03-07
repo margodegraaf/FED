@@ -1,0 +1,199 @@
+/* Universal Selector: alle elementen uit het CSS document. */
+* { 
+	font-family:"Arial", Georgia, Serif;
+	line-height: 1.5em;
+}
+
+/* Type Selector: voor een specifiek element uit het document. */
+body {
+	color: #000000;
+	background: #585858 url(../img/bg.png) repeat 0px 0px;
+}
+
+section, form {
+	max-width: 980px;
+	margin: 0px auto 0px auto;
+	padding: 1px;
+	position: relative;
+	background-color: #ffffff;
+	/*	-webkit-border-radius: 30px; -moz-border-radius: 30px; */
+	border-radius: 30px;
+}
+
+/* Descendant Selector: specifiek element en het element dat daarop volgt. */
+ul li {
+	list-style-type: none;
+	float: left;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration:none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0px 0px 0px 10px;
+}
+
+section article {
+	margin: 15px;
+	padding: 5px;
+}
+
+fieldset {
+	border: double 10px #333333;
+	border-radius: 1em;
+	padding: 5px;
+	margin: 20px 20px 20px 20px;
+}
+
+legend {
+	font-size: 30px;
+	font-weight: bold;
+	color: currentColor;
+	text-transform: uppercase;
+	position: absolute;
+	left: 700px;
+}
+
+a {
+	color: #397D02;
+	text-decoration: none;
+}
+
+p {
+	margin: 15px;
+}
+
+textarea{
+	clear:left;
+	min-width: 267px;
+	min-height:150px;
+	max-width: 267px;
+	max-height:150px;
+}
+
+/* Dynamic pseudo-classes: :hover, :active, :focus, :lang */
+nav a:hover {
+	color: #397D02;
+}
+
+/* nth-last-of-type: spreekt element aan dat een bepaald aantal siblings achter zich heeft in de DOC tree. */
+h2:nth-last-of-type(1) { 
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 11px 11px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* :first-child: het eerste volgende element van een specifiek element. */
+h2:first-child {
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	color: #397D02;
+	text-transform: uppercase;
+	text-shadow: 11px 11px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* :first-line: eerste regel uit een alinea. Kan alleen gebruikt worden op block, inline-block, table-caption of table-cell.*/
+legend:first-line { 
+	background-color:hsla(120, 100%, 50%,0.5);
+}
+
+/* first-letter: eerste letter uit een alinea. Kan alleen gebruikt worden op block, inline-block, table-caption of table-cell. */
+legend:first-letter {
+	font-weight:bold;
+	color: #ffffff;
+}
+
+/* nth-child: spreekt element aan dat een bepaald aantal siblings voor zich heeft in de DOC tree. */
+p:nth-child(6) { 
+	text-decoration:underline;
+}
+
+/* last-child: spreekt laatste child aan uit een parent element. Dit is het zelfde als :nth-last-child(1). */
+input:last-child { 
+	margin: 0px 30px 30px 30px;
+} 
+
+/* Direct Child Selector: element die zijn child element aanspreekt.*/
+article > h1 { 
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color:#397D02; 
+	text-shadow: 11px 11px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* General Sibling: De elementen moeten samen in hetzelfde parent zitten maar hoeven niet op elkaar aan te sluiten; */
+h1~h2{
+	font-size:15px;
+	margin: -20px 0px -10px 0px;
+}
+
+h1~h2:before{ 
+	content: " ~ "
+}
+
+/* Adjacent Sibling Selector: element + volgende sibling. De elementen moeten samen in hetzelfde parent zitten; */
+p + em { 
+	font-size: 17px;
+	color:#ffffff; 
+	background: rgb(90, 90, 90);
+	background: linear-gradient(120deg, rgb(90, 90, 90) 31%, rgb(50, 50, 50) 60%);
+	display: block;
+	padding: 5px;
+	margin: 0px 10px 0px 10px;
+	border-color: #000000;
+	border-style:double;
+	border-width:10px;
+	/* -webkit-box-shadow: 7px 7px 25px 0px rgba(255, 0, 0, 0.5); -moz-box-shadow:    7px 7px 25px 0px rgba(255, 0, 0, 0.5); */
+	box-shadow: 7px 7px 25px 0px rgba(0, 120, 0, 0.75);
+}
+
+/* Attribute Selector: werkt door middel van een attribute die is meegegeven in de HTML code.*/
+input[type=text], [type=tel], [type=email]{
+	display: block;
+	width: 50%;
+	box-sizing: border-box;
+	font-size: 1.2em;
+	border-radius: .3em;
+	box-shadow: inset .1em .1em .2em rgba(0,0,0,.5);
+	transition: 0.2s;
+	margin: .3em 0;
+	padding: 5px;
+}
+
+input[type=text]:focus, [type=tel]:focus, [type=email]:focus {
+	box-shadow: 5px 5px #000000;
+	padding: 10px;
+}
+
+input[type=submit] {
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+	text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.8);
+	/*-webkit-border-radius: 30px;
+	-moz-border-radius: 30px; */
+	border-radius: 30px;
+	background: rgb(0, 255, 0);
+	/*background: -moz-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	background: -webkit-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	background: -o-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	background: -ms-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%); */
+	background: linear-gradient(120deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	/*-webkit-box-shadow: 0px 2px 1px rgba(50, 0, 50, 0.75);
+	-moz-box-shadow:    0px 2px 1px rgba(50, 0, 50, 0.75); */
+	box-shadow:         0px 2px 1px rgba(50, 0, 50, 0.75);
+}
+
+label[for="naam"]:before, [for="bedrijf"]:before, [for="adres"]:before, [for="postcode"]:before, 
+	[for="plaats"]:before, [for="telefoon"]:before, [for="email"]:before, [for="titel"]:before, 
+	[for="omschrijving"]:before, [for="doelgroep"]:before, [for="doelstelling"]:before, 
+	[for="looptijd"]:before, [for="datum"]:before, [for="begindatum"]:before, 
+	[for="bedrijfsnaam"]:before, [for="stageadres"]:before, [for="stagepostcode"]:before, 
+	[for="stageplaats"]:before, [for="sector"]:before, [for="core"]:before {
+	content: "* ";
+	color: red;
+} 
