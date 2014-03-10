@@ -1,10 +1,11 @@
-/* Universal Selector: alle elementen uit het CSS document. */
+/* Universal Selector: 
+	Alle elementen uit het CSS document. */
 * { 
 	font-family:"Arial", Georgia, Serif;
 	line-height: 1.5em;
 }
-
-/* Type Selector: voor een specifiek element uit het document. */
+/*	Type Selector:
+	Voor een specifiek element uit het document.  */
 body {
 	color: #000000;
 	background: #585858 url(../img/bg.png) repeat 0px 0px;
@@ -16,11 +17,14 @@ section, form {
 	padding: 1px;
 	position: relative;
 	background-color: #ffffff;
-	/*	-webkit-border-radius: 30px; -moz-border-radius: 30px; */
+	/* Support voor: IE 8.0, Opera mini 5.0-7.0 */
+	-webkit-border-radius: 30px; 
+	-moz-border-radius: 30px;  
 	border-radius: 30px;
 }
 
-/* Descendant Selector: specifiek element en het element dat daarop volgt. */
+/*	Descendant Selector: 
+	Specifiek element en het element dat daarop volgt. */
 ul li {
 	list-style-type: none;
 	float: left;
@@ -73,19 +77,22 @@ textarea{
 	max-height:150px;
 }
 
-/* Dynamic pseudo-classes: :hover, :active, :focus, :lang */
+/*	Dynamic pseudo-classes: 
+	Status aanpassen van een bepaald element. */
 nav a:hover {
 	color: #397D02;
 }
 
-/* nth-last-of-type: spreekt element aan dat een bepaald aantal siblings achter zich heeft in de DOC tree. */
+/*	nth-last-of-type: 
+	Spreekt element aan dat een bepaald aantal siblings achter zich heeft in de DOC tree. */
 h2:nth-last-of-type(1) { 
 	font-weight: bold;
 	text-transform: uppercase;
 	text-shadow: 11px 11px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* :first-child: het eerste volgende element van een specifiek element. */
+/*	:first-child: 
+	Het eerste volgende element van een specifiek element. */
 h2:first-child {
 	font-family: 'Oswald', sans-serif;
 	font-size: 25px;
@@ -94,38 +101,44 @@ h2:first-child {
 	text-shadow: 11px 11px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* :first-line: eerste regel uit een alinea. Kan alleen gebruikt worden op block, inline-block, table-caption of table-cell.*/
+/*	:first-line: 
+	Eerste regel uit een alinea. Kan alleen gebruikt worden op block, inline-block, table-caption of table-cell.*/
 legend:first-line { 
 	background-color:hsla(120, 100%, 50%,0.5);
 }
 
-/* first-letter: eerste letter uit een alinea. Kan alleen gebruikt worden op block, inline-block, table-caption of table-cell. */
+/*	first-letter: 
+	Eerste letter uit een alinea. Kan alleen gebruikt worden op block, inline-block, table-caption of table-cell. */
 legend:first-letter {
 	font-weight:bold;
 	color: #ffffff;
 }
 
-/* nth-child: spreekt element aan dat een bepaald aantal siblings voor zich heeft in de DOC tree. */
+/*	nth-child: 
+	Spreekt element aan dat een bepaald aantal siblings voor zich heeft in de DOC tree. */
 p:nth-child(6) { 
 	text-decoration:underline;
 }
 
-/* last-child: spreekt laatste child aan uit een parent element. Dit is het zelfde als :nth-last-child(1). */
+/*	last-child: 
+	Spreekt laatste child aan uit een parent element. Dit is het zelfde als :nth-last-child(1). */
 input:last-child { 
 	margin: 0px 30px 30px 30px;
 } 
 
-/* Direct Child Selector: element die zijn child element aanspreekt.*/
+/*	Direct Child Selector: 
+	Element die zijn child element aanspreekt. Hij gaat 1 verdieping naar beneden.*/
 article > h1 { 
 	font-family: 'Oswald', sans-serif;
 	font-size: 25px;
 	font-weight: bold;
 	text-transform: uppercase;
-	color:#397D02; 
+	color: #397D02; 
 	text-shadow: 11px 11px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* General Sibling: De elementen moeten samen in hetzelfde parent zitten maar hoeven niet op elkaar aan te sluiten; */
+/*	General Sibling: 
+	De elementen moeten samen in hetzelfde parent zitten maar hoeven niet op elkaar aan te sluiten; */
 h1~h2{
 	font-size:15px;
 	margin: -20px 0px -10px 0px;
@@ -135,7 +148,8 @@ h1~h2:before{
 	content: " ~ "
 }
 
-/* Adjacent Sibling Selector: element + volgende sibling. De elementen moeten samen in hetzelfde parent zitten; */
+/*	Adjacent Sibling Selector:
+	Element + volgende sibling. De elementen moeten samen in hetzelfde parent zitten; */
 p + em { 
 	font-size: 17px;
 	color:#ffffff; 
@@ -147,26 +161,34 @@ p + em {
 	border-color: #000000;
 	border-style:double;
 	border-width:10px;
-	/* -webkit-box-shadow: 7px 7px 25px 0px rgba(255, 0, 0, 0.5); -moz-box-shadow:    7px 7px 25px 0px rgba(255, 0, 0, 0.5); */
+	/* Support voor: IE 8.0, Opera mini 5.0-7.0 */
+	-webkit-box-shadow: 7px 7px 25px 0px rgba(255, 0, 0, 0.5); 
+	-moz-box-shadow:    7px 7px 25px 0px rgba(255, 0, 0, 0.5); 
 	box-shadow: 7px 7px 25px 0px rgba(0, 120, 0, 0.75);
 }
 
-/* Attribute Selector: werkt door middel van een attribute die is meegegeven in de HTML code.*/
+/*	Attribute Selector:
+	Werkt door middel van een attribute die is meegegeven in de HTML code.*/
 input[type=text], [type=tel], [type=email]{
 	display: block;
 	width: 50%;
+	/* Als je box-sizing: border-box; op een element zet, zal de padding en de border geen invloed meer uitoefenen op de width. */
 	box-sizing: border-box;
-	font-size: 1.2em;
-	border-radius: .3em;
-	box-shadow: inset .1em .1em .2em rgba(0,0,0,.5);
-	transition: 0.2s;
 	margin: .3em 0;
 	padding: 5px;
+	font-size: 15px;
+	border-radius: 10px;
+	/* Support voor: IE 8.0, IE 9,0, Opera mini 5.0-7.0 */
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s; 
 }
 
 input[type=text]:focus, [type=tel]:focus, [type=email]:focus {
-	box-shadow: 5px 5px #000000;
+	box-shadow: 5px 5px #397D02; 
 	padding: 10px;
+	outline: none;
 }
 
 input[type=submit] {
@@ -174,26 +196,41 @@ input[type=submit] {
 	font-size: 16px;
 	color: rgb(255, 255, 255);
 	text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.8);
-	/*-webkit-border-radius: 30px;
-	-moz-border-radius: 30px; */
+	/* Support voor: IE 8.0, Opera mini 5.0-7.0 */
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px; 
 	border-radius: 30px;
 	background: rgb(0, 255, 0);
-	/*background: -moz-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	/* Support voor: IE 8.0, IE 9.0, Opera mini 5.0-7.0 */
+	background: -moz-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
 	background: -webkit-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
 	background: -o-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
-	background: -ms-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%); */
+	background: -ms-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%); 
 	background: linear-gradient(120deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
-	/*-webkit-box-shadow: 0px 2px 1px rgba(50, 0, 50, 0.75);
-	-moz-box-shadow:    0px 2px 1px rgba(50, 0, 50, 0.75); */
-	box-shadow:         0px 2px 1px rgba(50, 0, 50, 0.75);
+	/* Support voor: IE 8.0, Opera mini 5.0-7.0 */
+	-webkit-box-shadow: 0px 2px 1px rgba(50, 0, 50, 0.75);
+	-moz-box-shadow: 0px 2px 1px rgba(50, 0, 50, 0.75); 
+	box-shadow: 0px 2px 1px rgba(50, 0, 50, 0.75);
+	/* Support voor: IE 8.0, IE 9,0, Opera mini 5.0-7.0 */
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out; 
 }
 
-label[for="naam"]:before, [for="bedrijf"]:before, [for="adres"]:before, [for="postcode"]:before, 
-	[for="plaats"]:before, [for="telefoon"]:before, [for="email"]:before, [for="titel"]:before, 
-	[for="omschrijving"]:before, [for="doelgroep"]:before, [for="doelstelling"]:before, 
-	[for="looptijd"]:before, [for="datum"]:before, [for="begindatum"]:before, 
-	[for="bedrijfsnaam"]:before, [for="stageadres"]:before, [for="stagepostcode"]:before, 
-	[for="stageplaats"]:before, [for="sector"]:before, [for="core"]:before {
+input[type=submit]:hover  {
+/* Support voor: IE 8.0, Opera mini 5.0-7.0 */
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
+}
+
+/*	:before 
+	Hiermee kan je content voor het geselecteerde element zetten.*/
+label[for="naam"]:before, [for="bedrijf"]:before, [for="adres"]:before, [for="postcode"]:before, [for="plaats"]:before, [for="telefoon"]:before, [for="email"]:before, [for="titel"]:before, 
+	[for="omschrijving"]:before, [for="doelgroep"]:before, [for="doelstelling"]:before, [for="looptijd"]:before, [for="datum"]:before, [for="begindatum"]:before, [for="bedrijfsnaam"]:before, 
+	[for="stageadres"]:before, [for="stagepostcode"]:before, [for="stageplaats"]:before, [for="sector"]:before, [for="core"]:before {
 	content: "* ";
-	color: red;
+	color: #ff0000;
 } 
