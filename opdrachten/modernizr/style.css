@@ -1,0 +1,26 @@
+body {
+	width: 80%;
+}
+
+section {
+	margin:1em;
+	padding:1em;
+	background-color: #eee;
+	box-shadow: 2px 2px 5px #000
+}
+
+/* Zorg er voor dat browsers die géén boxshadow ondersteunen wel een border zien */
+.no-boxshadow section {
+	border: 1px solid #000;
+}
+
+/* Browsers die text-stadow ondersteunen hebben witte letters met een grijze text-shadow */
+article {
+	color: #ffffff;
+	text-shadow: 2px 2px #333333;
+}
+
+.no-textshadow article {
+	text-shadow: none;
+	color: #333333;
+}
