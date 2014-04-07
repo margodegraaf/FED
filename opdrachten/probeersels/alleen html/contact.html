@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CMD Amsterdam</title>
+    	<meta charset="utf-8" />    
+		<meta name="description" content="CMD Amsterdam" />    
+    	<meta name="author" content="Margo de Graaf" />    
+    	<meta name="keywords" content="opdracht, 1, hva, front, end, development, cmd, amsterdam, opleiding, opleidingsinformatie"/> 
+		<!-- Oproepen van CSS bestand-->
+		<link rel="stylesheet" type="text/css" href="inc/style.css" />		
+	</head>
+	
+	<body>
+			<header>
+				<nav>
+					<ul>
+					  <li><a href="opleiding.html">Opleiding CMD Amsterdam</a></li>
+					  <li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>	
+			</header>
+		
+			<section>
+					<h1>Contact</h1>
+					<p>
+					Bent u geinteresseerd in samenwerken met CMD Amsterdam? Dat kan!
+					Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook
+					lopen de studenten stage, in het tweede en afstudeerjaar.
+					</p>
+					
+					<p class="italic">
+					CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.
+					</p>
+					
+					<p>
+					Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen.
+					Wij nemen zo nodig contact met u op nadat het formulier is verstuurd.
+					Voor vragen of opmerkingen kunt u <a href="contact.html">contact</a> met ons op.
+					</p>
+			</section>
+			
+			<form action="#" method="post" autocomplete="on">
+			Naam*: <input type="text" name="naam" placeholder="Naam" autofocus required><br>
+			Bedrijf*: <input type="text" name="bedrijf" placeholder="Bedrijf" required><br>
+			Adres*: <input type="text" name="adres" placeholder="Adres" required><br>
+			Postcode*: <input type="number" name="postcode" placeholder="Postcode" required><br>
+			Plaats*: <input type="text" name="plaats" placeholder="Plaats" required><br>
+			Telefoon*: <input type="number" name="telefoon" placeholder="Telefoon" required><br>
+			E-mail*: <input type="email" name="email" placeholder="E-mail" required><br>
+			
+			<p>Ik wil mij aanmelden voor:</p>
+			<input type="radio" name="keuze" value="project">Project<br>
+			<input type="radio" name="keuze" value="stage">Stage<br>
+			
+			<h2>Project</h2>
+			Titel*: <input type="text" name="titel" placeholder="Titel" required><br>
+			Opdrachtomschrijving*: <input type="text" name="omschrijving" placeholder="Omschrijving" required><br>
+			Doelgroepomschrijving*: <input type="text" name="doelgroep" placeholder="Doelgroepomschrijving" required><br>
+			Doelstelling/ intentie van het project*: <input type="text" name="doelstelling" placeholder="Doelstelling/ intentie van het project" required><br>
+			Looptijd*: <input type="text" name="looptijd" placeholder="Looptijd" required><br>
+			<!-- Foutmelding: The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill. -->
+			Deadline*: <input type="date" name="datum" required><br>
+			Geschikt voor:
+			<select id="geschikt">
+				<option>Eerstejaars studenten</option>
+				<option>Tweedejaars studenten</option>
+				<option>Derdejaars studenten</option>
+				<option>Afstudeer studenten</option>
+				<option>Onbekend</option>
+			</select><br>
+			Opmerking:<textarea id="opmerking" rows="3"></textarea><br>
+			
+			<h2>Stage</h2>
+			<select id="stagegeschikt">
+				<option>Tweedejaars studenten</option>
+				<option>Afstudeer studenten</option>
+				<option>Onbekend</option>
+			</select><br>
+			<p>Hoelang is de stage?</p>
+			<input type="radio" name="stagelengte" value="tien">10 weken<br>
+			<input type="radio" name="stagelengte" value="twintig">20 weken<br>
+			<!-- Foutmelding: The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill. -->
+			Begindatum*: <input type="date" name="begindatum" required><br>
+			Beschrijving stagewerkzaamheden:<textarea id="werkzaamheden" rows="3"></textarea><br>
+			
+			<h3>Beschrijving stagebedrijf</h3>
+			Bedrijfsnaam*: <input type="text" name="bedrijfsnaam" placeholder="Bedrijfsnaam" required><br>
+			Adres*: <input type="text" name="stageadres" placeholder="Adres" required><br>
+			Postcode*: <input type="number" name="stagepostcode" placeholder="Postcode"  required><br>
+			Plaats*: <input type="text" name="stageplaats" placeholder="Plaats" required><br>
+			Sector*: <input type="text" name="sector" placeholder="Sector" required><br>
+			Core Business*: <input type="text" name="core" placeholder="Core Business" required><br>
+			Opmerking:<textarea id="stageopmerking" rows="3"></textarea><br>
+			
+			<input type="submit" value="Verzenden">
+			<p>* verplichte velden<p>
+			</form>
+			
+			<!-- Nog niet nodig:
+			<aside></aside>
+			<footer></footer> -->
+	</body>
+</html>

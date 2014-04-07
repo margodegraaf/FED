@@ -1,0 +1,391 @@
+/* BODY */
+
+/*	Type Selector: voor een specifiek element uit het document. */
+body { 
+	background-color: #FFFFFF;
+	font-family: "Arial", Georgia, Serif;
+	line-height: 1.5em;
+	font-size: 1em;
+}
+
+h1 {
+	color: #ffffff;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+h2 {
+	color: #007536;
+	font-size: 1.1em;
+}
+
+a {
+	color: #ffffff;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: none;
+}
+
+/*	Dynamic pseudo-classes: status aanpassen van een bepaald element. */
+a:hover {
+	color: #000000;
+}
+
+
+/* NAV */
+nav {
+	background-color: #333333;
+}
+
+/* Komma: opmaak geldt voor zowel <ul> als <li>*/
+nav ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* :nth-last-child : pakt elke eerste li die in een ul zit, die zelf weer in een li en ul zit.  met "n" begin je te tellen vanaf 0. */
+/* nav ul li ul li */
+nav ul li ul li:nth-last-child(1n) {
+	background-color:#474747;
+	padding: 0em 0em 0em 0.5em;
+}
+
+/*	Descendant Selector: specifiek element en het element dat daarop volgt. */
+nav a {
+	color: #62DA9A;
+	font-size: 1.1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 1.8em;
+	display: block;
+	padding: 0.3em;
+}
+
+nav a:hover {
+	color: #ffffff;
+}
+
+
+/* ASIDE */
+aside {
+	background-color: #62DA9A;
+	/*padding: 0.3em; */
+}
+
+/*	:first-child: het eerste volgende element van een specifiek element. */
+aside a:first-child {
+	font-style: normal;
+	text-decoration: underline;
+}
+
+/*	Je kan ook twee dynamic pseudo-classes op 1 bepaald element uitvoeren. */
+aside a:first-child:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+/*	Direct Child Selector: element die zijn child element aanspreekt. Hij gaat 1 verdieping naar beneden.*/
+h1>a {
+	color: #000000;
+	font-size: 0.7em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/*	General Sibling: de elementen moeten samen in hetzelfde parent zitten maar hoeven niet op elkaar aan te sluiten; */
+h1~time {
+	font-weight: bold;
+	font-style: italic;
+}
+
+aside section a:first-of-type {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+aside section a:first-of-type:after{ 
+	font-weight: normal;
+	color: #000000;
+	content: " | "
+}
+
+/*	nth-child: spreekt element aan dat een bepaald aantal siblings voor zich heeft in de DOC tree. */
+aside section a:nth-child(2) {
+	color: #000000;
+	font-style: italic;
+	
+}
+
+aside section {
+	background-color: #62DA9A;
+}
+
+aside section a:hover {
+	color: #ffffff;
+}
+
+aside:first-of-type {
+	/* positionering links */
+}
+
+/*	nth-last-of-type: spreekt element aan dat een bepaald aantal siblings achter zich heeft in de DOC tree. */
+aside:last-of-type {
+	/* positionering rechts */
+}
+
+
+/* ARTICLE */
+article {
+	background-color: #36DA82;
+	padding: 0.3em;
+}
+
+article ol a:only-child {
+	color: #000000;
+}
+
+/* :only-child : selecteert alle elementen dat maar enig kind is van parent */
+article ol a:only-child:hover {
+	color: #ffffff;
+}
+
+
+/* FORM */
+form {
+	background-color: #36DA82;
+	padding: 0.3em;
+}
+
+section {
+	background-color: #36DA82;
+}
+
+fieldset {
+	border: double 0.8em #ffffff;
+	width: 90%;
+	border-radius: 1em;
+	padding: 0.3em;
+	margin: 1.3em 1.3em 1.3em 1.3em;
+}
+
+/*	:first-letter: eerste letter uit een alinea. Kan alleen gebruikt worden op block, inline-block, table-caption of table-cell. */
+legend:first-letter {
+	font-family: 'Merienda One', cursive;
+	font-size: 1.5em;
+	color: #ffffff;
+	text-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.8);
+	padding: 0em 0.2em 0em 0em;
+}
+
+/*	Adjacent Sibling Selector: element + volgende sibling. De elementen moeten samen in hetzelfde parent zitten; */
+p + em {
+	font-weight: bold;
+}
+
+/*	Attribute Selector: werkt door middel van een attribute die is meegegeven in de HTML code.*/
+input[type=text], [type=tel], [type=email]{
+	display: block;
+	width: 100%;
+	/* Als je box-sizing: border-box; op een element zet, zal de padding en de border geen invloed meer uitoefenen op de width. */
+	box-sizing: border-box;
+	margin: .3em 0;
+	padding: 0.3em;
+	font-family: 'Merienda One', cursive;
+	font-size: 1em;
+	border-radius: 1em;
+	/* Support voor: IE 8.0, IE 9,0, Opera mini 5.0-7.0 */
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s; 
+}
+
+input[type=text]:focus, [type=tel]:focus, [type=email]:focus {
+	box-shadow: 0.3em 0.3em #00B454; 
+	padding: 0.7em;
+	outline: none;
+}
+
+input[type=submit] {
+	color: rgb(255, 255, 255);
+	font-size: 1em;
+	color: rgb(255, 255, 255);
+	text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.8);
+	/* Support voor: IE 8.0, Opera mini 5.0-7.0 */
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em; 
+	border-radius: 2em;
+	background: rgb(0, 255, 0);
+	/* Support voor: IE 8.0, IE 9.0, Opera mini 5.0-7.0 */
+	background: -moz-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	background: -webkit-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	background: -o-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	background: -ms-linear-gradient(210deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%); 
+	background: linear-gradient(120deg, rgb(0, 255, 0) 9%, rgb(0, 20, 20) 100%);
+	/* Support voor: IE 8.0, Opera mini 5.0-7.0 */
+	-webkit-box-shadow: 0px 2px 1px rgba(50, 0, 50, 0.75);
+	-moz-box-shadow: 0px 2px 1px rgba(50, 0, 50, 0.75); 
+	box-shadow: 0px 2px 1px rgba(50, 0, 50, 0.75);
+	margin: 0px 0px 5px 40px;
+	/* Support voor: IE 8.0, IE 9,0, Opera mini 5.0-7.0 */
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out; 
+}
+
+input[type=submit]:hover  {
+/* Support voor: IE 8.0, Opera mini 5.0-7.0 */
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
+}
+
+/*	:before : hiermee kan je content voor het geselecteerde element zetten. */
+label[for="naam"]:before, [for="bedrijf"]:before, [for="adres"]:before, [for="postcode"]:before, [for="plaats"]:before, [for="telefoon"]:before, [for="email"]:before, [for="titel"]:before, 
+	[for="omschrijving"]:before, [for="doelgroep"]:before, [for="doelstelling"]:before, [for="looptijd"]:before, [for="datum"]:before, [for="begindatum"]:before, [for="bedrijfsnaam"]:before, 
+	[for="stageadres"]:before, [for="stagepostcode"]:before, [for="stageplaats"]:before, [for="sector"]:before, [for="core"]:before {
+	content: "* ";
+	color: #000000;
+} 
+
+textarea{
+	clear:left;
+	min-width: 18em;
+	min-height: 10em;
+	max-width: 18em;
+	max-height: 10em;
+}
+
+
+/* VIDEO */
+video {
+  width: 100%;
+}
+  
+  
+ /* FIGURE*/ 
+figure img {
+  width: 100%;
+}
+
+
+/* FOOTER */
+footer {
+	background-color: #00B454;
+	padding: 0.3em;
+}
+
+footer form {
+	background-color: #00B454;
+	padding: 0.3em;
+}
+
+footer ul li {
+	font-weight:bold;
+}
+
+/* :nth-of-type : pakt elk tweede element van de paragrafen in de footer. */ 
+footer p:nth-of-type(2n) {
+	font-style: italic;
+}
+
+/* :last-child pakt elk laatste element van zijn parent */
+footer p:last-child
+{
+	font-size:0.8em;
+}
+
+
+/* Tablet */
+@media screen and (min-width: 47em) {
+	aside {
+		width: 50%;
+		display: inline-block;
+		
+	}
+	
+	article {
+		width: 100%;
+		display: inline-block;
+	}
+	
+	video {
+		width: 95%;
+	}
+	
+	figure {
+		width: 90%;
+	}
+}   
+
+
+/* TRY!
+aside {
+		width: 50%;
+		float:left;
+	}
+
+	video {
+		width: 49%;
+	}
+	
+	figure img {
+		width: 49%;
+	}
+	
+	footer {
+		display: inline-block;
+		width: 32%;
+	}
+
+*/
+
+
+
+
+/* Big screens */
+@media screen and (min-width: 63em) {
+	nav  { 
+	background-color: #333333;
+	display: inline-block;
+	width:100%;
+	}
+	
+	nav ul li {
+	float: left;
+	}
+
+	aside {
+		width: 50%;
+		float:right;
+	}
+	
+	article {
+		display: block;
+		width: 50%;
+	}
+	
+	video {
+		width: 60%;
+	}
+	
+	figure img {
+		width: 60%;
+	}
+	
+	footer {
+		width: 100%;
+	}
+}   
+
+
+/* Color scheme
+S		#62DA9A
+M		#36DA82
+L		#00B454
+XL	#007536 */
